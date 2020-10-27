@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 /**
  * Funzione navigazione next e prev img
- * @param {*} direction // navigazione next o prev
+ * @param {string} direction // navigazione next o prev
  */
 
 function navNextPrevImg (direction){
