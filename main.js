@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
 
+     // Click on mouse
     $('.next').click(function(){
         navNextPrevImg('next');
     });
@@ -11,7 +12,19 @@ $(document).ready(function(){
     $('.prev').click(function(){
         navNextPrevImg('prev');
     });
+    
+    // Nav with Keyboard
+    $(document).keydown(function(event) {
+        console.log(event.keyCode); //? log del tasto premuto in console log
 
+        if (event.keyCode == 37) {
+            navNextPrevImg('prev'); 
+        } 
+        else if (event.keyCode == 39){
+            navNextPrevImg('next');
+        }
+    });
+    
     
 }); //! End doc.ready 
 
