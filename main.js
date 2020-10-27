@@ -24,7 +24,7 @@ function navNextPrevImg (direction){
     var activeImage = $('.images img.active');
     var activeCircle = $ ('.nav i.active');
 
-    // reset active
+    // reset active img
     activeImage.removeClass('active');
     activeCircle.removeClass('active');
 
@@ -38,4 +38,16 @@ function navNextPrevImg (direction){
             activeCircle.next('i').addClass('active');
         }
     }
+
+    // Direzione: prev
+    if (direction === 'prev') {
+        if (activeImage.hasClass('first')) {
+            $('.images img.last').addClass('active');
+            $('.nav i.last').addClass('active');
+        } else {
+            activeImage.prev('img').addClass('active');
+            activeCircle.prev('i').addClass('active');
+        }
+    }
+
 }
